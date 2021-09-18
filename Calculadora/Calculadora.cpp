@@ -5,6 +5,7 @@
  */
 
 #include <iostream>
+#include <math.h>
 using namespace std;
 int main() {
     float num1 = 0;
@@ -23,22 +24,27 @@ int main() {
     //Ahora va el código en orden//
 
     if (opera=='+') {
-        std::cout <<"Resultado:" << std::endl;
+        std::cout << "Resultado:" << std::endl;
         std::cout << num1 << opera << num2 << "=" << num1+num2 << std::endl;
     }
     else {
         if(opera=='-')
-            std::cout <<"Resultado:" << std::endl;
+            std::cout << "Resultado:" << std::endl;
             std::cout << num1 << opera << num2 << "=" << num1-num2 << std::endl;
         else {
             if(opera=='/')
-                std::cout <<"Resultado:" << std::endl;
+                std::cout << "Resultado:" << std::endl;
                 std::cout << num1 << opera << num2 << "=" << num1/num2 << std::endl;
         }
         if(opera=='*')
-            std::cout <<"Resultado:" << std::endl;
+            std::cout << "Resultado:" << std::endl;
             std::cout << num1 << opera << num2 << "=" << num1*num2 << std::endl;
     }
-
+        if (opera== '%') {
+            std::cout << "Resultado:" << std::endl;
+            std::cout << num1 << opera << num2 << "=" << fmod(num1, num2) <<std::endl;
+        }
     return 0;
-}
+        }
+
+
