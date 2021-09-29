@@ -1,6 +1,8 @@
-*// Author: Méndez Avilés Sandra
-*// mendezavilessandra@gmail.com
-*// Sept, 29. 2021
+/*
+ * Author: Sandra Mendez Aviles
+ * mendezavilessandra@gmail.com
+ * Sept 29, 2021
+ */
   
 #include <iostream>
 #include <array>
