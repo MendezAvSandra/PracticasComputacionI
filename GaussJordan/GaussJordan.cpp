@@ -3,7 +3,7 @@
  * mendezavilessandra@gmail.com
  * Sept 29, 2021
  */
-  
+
 #include <iostream>
 #include <array>
 
@@ -47,7 +47,7 @@ int main()
     return 0; // Indicamos que salimos del programa con éxito
 }
 
-/* 
+/*
 Llena 'miMatriz' con valores ingresados por el usuario para cada elemento.
 No regresa ningún valor.
 */
@@ -63,7 +63,7 @@ void LlenarMatriz(matriz & miMatriz)
     }
 }
 
-/* 
+/*
 Imprime cada elemento de 'miMatriz' emulando una matriz con corchetes cuadrados.
 No regresa ningún valor.
 */
@@ -86,7 +86,11 @@ No regresa ningún valor.
 template <typename matriz>
 void ImprimirSolucion(matriz & miMatriz)
 {
-    //TODO
+    int variables = miMatriz.size();
+    cout << "Solucion:" <<endl;
+    for(int i = 0; i < variables; i++){
+        cout <<"x" << i << " = "<< miMatriz[i][variables] << endl;
+    }
 }
 
 /*
@@ -96,5 +100,35 @@ No regresa ningún valor.
 template <typename matriz>
 void GaussJordan(matriz & miMatriz)
 {
-    //TODO
-}
+    double mayor;
+    int indice;
+    double aux;
+    double pivote;
+
+    int variables = miMatriz.size();
+    for(int i = 0; i < variables; i++ ){
+        mayor = abs(miMatriz[i][i]);
+        indice = i;
+        for(int j = i + 1; j < variables; j++){
+            if(mayor < abs(miMatriz[j][i])){
+                mayor = abs(miMatriz[j][i]);
+                indice = j; } }
+
+        if(i != indice){
+            for(int k = 0; k < variables + 1; k++){
+                aux = miMatriz[i][k];
+                miMatriz[i][k] = miMatriz[indice][k];
+                miMatriz[indice][k] = aux;} }
+        if(miMatriz[i][i] == 0){
+            cout << "No tiene solucion" << endl;
+        }
+        else{
+            for(int k = 0; k < variables; k++){
+                if (k != i){
+                    pivote = -miMatriz[k][i];
+                    for(int l = i; l < variables + 1; l++){
+                        miMatriz[k][l] = miMatriz[k][l] + pivote * miMatriz[i][l] / miMatriz[i][i];}}
+                else{
+                    pivote = miMatriz[i][i];
+                    for(int l = i; l < variables + 1; l++){
+                        miMatriz[k][l] = miMatriz[k][l] / pivote; } } } } } }
