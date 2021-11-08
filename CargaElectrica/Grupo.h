@@ -1,5 +1,6 @@
-/* mendezavilessandra@gmail.com */
-
+/*Autor: Sandra Mendez Aviles
+ * mendezavilessandra@gmail.com
+ * 07 de noviembre de 2021 */
 
 #ifndef GRUPO_H
 #define GRUPO_H
