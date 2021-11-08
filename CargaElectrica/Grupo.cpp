@@ -1,4 +1,7 @@
-/* mendezavilessandra@gmail.com */
+/*Autor: Sandra Mendez Aviles
+ * mendezavilessandra@gmail.com
+ * 07 de noviembre de 2021 */
+
 # include <string>
 # include <array>
 # include <iostream>
